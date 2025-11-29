@@ -1,8 +1,8 @@
 {
-  "name": "nnda-itchio-profile",
-  "version": "1.6.0",
+  "name": "@yuna0x0/nnda-itchio-profile",
+  "version": "1.6.1",
   "private": true,
-  "description": "Source code for my itch.io profile page.",
+  "description": "Source code for itch.io profile page.",
   "scripts": {
     "build": "npx tsx src/scripts/build.ts",
     "publish": "npx tsx src/scripts/publish.ts",
@@ -10,14 +10,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nndda/itchio-profile.git"
+    "url": "git+https://github.com/yuna0x0/itchio-profile.git"
   },
-  "author": "nnda",
+  "contributors": [
+    "nnda",
+    "yuna0x0 <yuna@yuna0x0.com>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nndda/itchio-profile/issues"
+    "url": "https://github.com/yuna0x0/itchio-profile/issues"
   },
-  "homepage": "https://github.com/nndda/itchio-profile#readme",
+  "homepage": "https://github.com/yuna0x0/itchio-profile#readme",
   "devDependencies": {
     "@eslint/compat": "^1.4.1",
     "@eslint/js": "^9.39.1",
@@ -36,5 +39,6 @@
     "sass": "^1.93.3",
     "simple-git": "^3.30.0",
     "typescript-eslint": "^8.46.3"
-  }
+  },
+  "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a"
 }

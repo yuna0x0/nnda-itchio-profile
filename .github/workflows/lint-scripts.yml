@@ -6,16 +6,16 @@ on:
       - main
       - dev
     paths:
-      - '**/*.ts'
-      - '.github/workflows/lint-scripts.yml'
-      - 'src/config/eslint.config.ts'
+      - "**/*.ts"
+      - ".github/workflows/lint-scripts.yml"
+      - "src/config/eslint.config.ts"
   pull_request:
     branches:
       - main
     paths:
-      - '**/*.ts'
-      - '.github/workflows/lint-scripts.yml'
-      - 'src/config/eslint.config.ts'
+      - "**/*.ts"
+      - ".github/workflows/lint-scripts.yml"
+      - "src/config/eslint.config.ts"
   workflow_dispatch:
 
 jobs:
@@ -26,26 +26,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
       - name: Set up Node.js
         uses: actions/setup-node@v6
         with:
-          node-version-file: '.nvmrc'
-
-      - name: Get npm cache directory
-        id: npm-cache-dir
-        shell: bash
-        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
-
-      - name: Cache linting dependencies
-        id: eslint-cache
-        uses: actions/cache@v4
-        with:
-          path: ${{ steps.npm-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-npm-eslint
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
 
       - name: Install linting dependencies
         run: |
-          npm install --no-save \
+          pnpm install --no-save \
             jiti \
             @eslint/js \
             @eslint/compat \
@@ -54,4 +48,4 @@ jobs:
             typescript-eslint
 
       - name: Lint scripts
-        run: npm run lint:scripts
+        run: pnpm run lint:scripts

@@ -1,8 +1,10 @@
-<h1 align="center"> <img height="32" width="32" src="https://cdn.simpleicons.org/itchdotio/fff"/> nnda&nbsp;<sub><sup>.itch.io</sup></sub> </h1>
+<h1 align="center">@yuna0x0/nnda-itchio-profile</h1>
 
 <div align="center">
 
-Source code for my itch.io profile page.
+Source code for itch.io profile page.
+
+Forked from [nndda/itchio-profile](https://github.com/nndda/itchio-profile).
 
 Main stylesheet: [`src/styles.css`](src/styles.css)
 ｜
@@ -136,11 +138,11 @@ Require Node.js `>23.5` or as latest as you possibly can get.
 
 0. Star this repo?? 👉👈 (optional)
 
-1. [Fork](https://github.com/nndda/itchio-profile/fork) this repository, and clone your fork locally.
+1. [Fork](https://github.com/yuna0x0/nnda-itchio-profile/fork) this repository, and clone your fork locally.
 
 1. Install the dependencies.
     ```
-    npm install
+    pnpm install
     ```
 
 1. Modify the [`src/styles.css`](src/styles.css) and/or the [`src/content.html`](src/content.html) to your liking.
@@ -151,22 +153,22 @@ Require Node.js `>23.5` or as latest as you possibly can get.
 
 1. Build the CSS.
     ```
-    npm run build
+    pnpm run build
     ```
 
 1. Test the CSS and the HTML, by copy-pasting the content of `dist/test.css` and `dist/content.html` to your itch.io profile page.
 
 1. If everything's fine and ready, publish your updates.
     ```
-    npm run publish
+    pnpm run publish
     ```
 
     And then copy-paste the CSS from `dist/styles.css` to your itch.io profile page, and save it.
 
 > [!IMPORTANT]
-> If you've only changed the HTML, there's no ***need to bump the version and publish the update*** via `npm run publish`, as that is only for the CSS updates.
+> If you've only changed the HTML, there's no ***need to bump the version and publish the update*** via `pnpm run publish`, as that is only for the CSS updates.
 >
-> You should, however, run the `npm run build`, and then commit and push the changes to the HTML files yourself.
+> You should, however, run the `pnpm run build`, and then commit and push the changes to the HTML files yourself.
 
 <br>
 
